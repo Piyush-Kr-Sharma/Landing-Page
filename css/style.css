@@ -1,0 +1,237 @@
+/* Navigation Bar: Logo and Image  */
+#logo{
+    margin: 10px 34px;
+    }
+
+#logo img{
+    height: 45px;
+    margin: 3px 6px;
+}
+
+/* CSS Reset  */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables  */
+:root{
+    --navbar-height: 49px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;   /* navbar ke jitne bhi element hai single line me aa jayenge which are (logo) and (all list together)*/
+    align-items: center;   /* individual elements hai jo navbar ke i.e. logo and lists come in center to the height of navbar in vertical direction*/
+    position: sticky;
+    /* margin: -25px 0px; */
+    top: 0px;
+}
+
+#navbar::before{
+    /* Condition of class::before/after = 1. content=""; 2. position: absolute; 3. height: x%; 4. width: y%;  */
+    content: "";
+    background-color: rgb(116 107 107);
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;  /* To make the content written in navbar class shown */
+    opacity: 0.7;  /* To reduce the brightness of background */
+}
+
+/* Navigation Bar: List Styling  */
+#navbar ul{
+    height: 45px;
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#navbar ul li{
+    list-style: none;
+   font-size: 1.2rem;
+   /* if padding is added here then it will hover only on written text it will not apply on padding area*/
+}
+
+#navbar ul li a{
+    color: white;
+   display: block;
+   padding: 3px 22px;   /* we have added the padding in li-a as if we hover on lists then hover property gets applied on the padding area as well */
+   border-radius: 20px;
+   text-decoration: none;
+}
+
+#navbar ul li a:hover{
+   color: black;
+   background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 200px;
+    height: 550px;
+}
+
+#home::before{
+    content: "";
+    position: absolute;  
+    background: url('../bg1.jpg') no-repeat center center/cover;  /* no-repeat center center/cover is very important to be written with url */
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;  
+    opacity: 0.89;
+}
+
+#home h1{
+    color: blue;
+    /* padding: 12px 0px;
+    margin: 12px 0px; */
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#home p{
+    color: rgb(237, 64, 21);
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Sofia", sans-serif;
+    font-weight: bold;
+  
+}
+
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+/* #services-container{
+   margin-top: -74px;
+} */
+#services .box{
+    border: 2px solid red;
+    margin: 2px 55px;
+    padding: 34px;
+    border-radius: 23px;
+    background-color: #e2ebeb;
+    margin-bottom: 20px;
+   
+}
+#services .box img{
+    height: 180px;
+    margin: auto;   /* margin: auto works only when display is block and height or width is set */
+    display: block;  
+}
+#services .box p{
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* Client Section */
+#client-section{
+    position: relative;
+}
+
+ #client-section::before{
+    content: "";
+    position: absolute;  
+    background: url('../bg2.jpg') no-repeat center center/cover;  /* no-repeat center center/cover is very important to be written with url */
+    height: 100%;
+    width: 100%;
+    z-index: -1;  
+    opacity: 0.6; 
+ }
+ #clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+  .client-item{
+    padding: 34px;
+  }
+ #clients img{
+    
+        height: 180px;
+        /* margin: auto;   
+        display: block;  */
+    }
+ 
+    /* Contact Section */
+    #contact{
+        position: relative;
+        margin-top: 36px;
+    }
+    
+    #contact::before{
+        content: "";
+        position: absolute;  
+        background: url('../contact.jpg') no-repeat center center/cover;  /* no-repeat center center/cover is very important to be written with url */
+        height: 100%;
+        width: 100%;
+        z-index: -1;  
+        opacity: 0.6;
+    }
+
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+
+    #contact-box form{
+        width: 40%;
+    }
+
+    #contact-box label{
+        font-size: 1.3rem;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    footer{
+        background-color: black;
+        color: white;
+        padding: 9px 20px;
+    }
+
+/* Utility Classes */
+.h-primary{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem;
+    padding: 12px;
+}
+.btn{
+    color: white;
+    background-color: brown;
+    border: 2px solid white;
+    margin: 17px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
